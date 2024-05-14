@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="container mx-auto font-mono max-w-lg">
+      <div class="tabs flex gap-x-2 mb-4">
+        <button class="selected border-b-2" id="loginBtn">Log In</button>
+        <button id="signupBtn" class="border-b-2">Sign Up</button>
+      </div>
+      <form
+        action="process.php"
+        method="post"
+        class="flex flex-col p-4 mx-auto max-w-lg gap-y-2 items-start border-2 rounded-md"
+      >
+        <label for="usernameLogin">Username:</label>
+        <input
+          type="text"
+          name="usernameLogin"
+          id="usernameLogin"
+          required
+          class="flex-1 w-full p-1 rounded-lg bg-purple-200"
+        />
+        <label for="passwordLogin">Password:</label>
+        <input
+          type="password"
+          minlength="8"
+          name="passwordLogin"
+          id="passwordLogin"
+          required
+          class="flex-1 w-full p-1 rounded-lg bg-purple-200"
+        />
+        <input
+          type="submit"
+          value="Log in"
+          name="LoginBtn"
+          class="px-2 py-1 mt-2 text-white border-2 border-purple-600 bg-purple-600 rounded-lg cursor-pointer hover:bg-purple-100 hover:border-purple-800 hover:border-2"
+        />
+      </form>
+      <form
+        action="process.php"
+        method="post"
+        class="hidden flex flex-col p-4 mx-auto max-w-lg gap-y-2 items-start border-2 rounded-md"
+      >
+        <label for="usernameSignup">Username:</label>
+        <input
+          type="text"
+          name="usernameSignup"
+          id="usernameSignup"
+          required
+          class="flex-1 w-full p-1 rounded-lg bg-purple-200"
+        />
+        <label for="passwordSignup">Password:</label>
+        <input
+          type="password"
+          minlength="8"
+          name="passwordSignup"
+          id="passwordSignup"
+          required
+          class="flex-1 w-full p-1 rounded-lg bg-purple-200"
+        />
+        <label for="passwordConfirmSignup">Confirm Password:</label>
+        <input
+          type="password"
+          minlength="8"
+          name="passwordConfirmSignup"
+          id="passwordConfirmSignup"
+          required
+          class="flex-1 w-full p-1 rounded-lg bg-purple-200"
+        />
+        <input
+          type="submit"
+          value="Create Account"
+          name="SignupBtn"
+          class="px-2 py-1 mt-2 text-white border-2 border-purple-600 bg-purple-600 rounded-lg cursor-pointer hover:bg-purple-100 hover:border-purple-800 hover:border-2"
+        />
+      </form>
+    </div>
+  </body>
+</html>
